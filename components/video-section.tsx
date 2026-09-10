@@ -50,8 +50,11 @@ export function VideoSection() {
                     backgroundSize: '26px 26px',
                   }}
                 />
-                <span className="relative inline-flex h-20 w-20 items-center justify-center rounded-full bg-mint text-forest shadow-lg transition group-hover:scale-105">
-                  <Play className="h-8 w-8 translate-x-0.5" aria-hidden="true" />
+                <span className="relative inline-flex h-20 w-20 items-center justify-center">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-mint/50" />
+                  <span className="relative inline-flex h-20 w-20 items-center justify-center rounded-full bg-mint text-forest shadow-lg transition-transform duration-300 group-hover:scale-110">
+                    <Play className="h-8 w-8 translate-x-0.5" aria-hidden="true" />
+                  </span>
                 </span>
                 <span className="relative font-display text-base font-medium text-white/90">
                   Watch the full project explanation
@@ -66,10 +69,10 @@ export function VideoSection() {
             href={CONTACT.youtube}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition hover:bg-forest focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+            className="group inline-flex items-center justify-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-all duration-300 hover:-translate-y-0.5 hover:bg-forest hover:shadow-lg hover:shadow-primary/20 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
           >
             Watch the Full Project
-            <ExternalLink className="h-4 w-4" aria-hidden="true" />
+            <ExternalLink className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" aria-hidden="true" />
           </a>
         </div>
       </div>

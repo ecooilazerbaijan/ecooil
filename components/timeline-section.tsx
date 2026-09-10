@@ -19,15 +19,16 @@ export function TimelineSection() {
           </p>
         </Reveal>
 
-        <ol className="relative mt-12 flex flex-col gap-8 pl-8">
+        <Reveal as="div" className="relative mt-12 flex flex-col gap-8 pl-8">
+          <ol className="contents">
           <span
             aria-hidden="true"
-            className="absolute left-[7px] top-2 bottom-2 w-px bg-gradient-to-b from-mint/60 via-mint/30 to-transparent"
+            className="timeline-line absolute left-[7px] top-2 bottom-2 w-px bg-gradient-to-b from-mint/60 via-mint/30 to-transparent"
           />
           {timeline.map((item, i) => (
-            <Reveal as="li" key={`${item.year}-${item.title}`} delay={i * 90} className="relative">
+            <Reveal as="li" key={`${item.year}-${item.title}`} delay={200 + i * 120} className="relative">
               <span
-                className="absolute -left-8 top-1.5 inline-flex h-4 w-4 items-center justify-center rounded-full border-2 border-mint bg-forest"
+                className="absolute -left-8 top-1.5 inline-flex h-4 w-4 items-center justify-center rounded-full border-2 border-mint bg-forest transition-transform duration-300 hover:scale-125"
                 aria-hidden="true"
               >
                 <span className="h-1.5 w-1.5 rounded-full bg-mint" />
@@ -39,7 +40,8 @@ export function TimelineSection() {
               <p className="mt-1 text-sm leading-relaxed text-white/70">{item.description}</p>
             </Reveal>
           ))}
-        </ol>
+          </ol>
+        </Reveal>
       </div>
     </section>
   )

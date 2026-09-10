@@ -17,7 +17,7 @@ export function TechSpecs() {
           {specifications.map((spec) => (
             <div
               key={spec.label}
-              className="flex flex-col gap-1 px-6 py-4 sm:flex-row sm:items-center sm:justify-between sm:gap-6"
+              className="flex flex-col gap-1 px-6 py-4 transition-colors duration-200 hover:bg-mint/25 sm:flex-row sm:items-center sm:justify-between sm:gap-6"
             >
               <dt className="font-display text-sm font-semibold text-foreground">{spec.label}</dt>
               <dd className="text-sm text-muted-foreground sm:text-right">{spec.value}</dd>

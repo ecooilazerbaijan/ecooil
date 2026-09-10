@@ -15,14 +15,14 @@ function TeamAvatar({ member }: { member: TeamMember }) {
     .slice(0, 2)
 
   return (
-    <div className="relative h-20 w-20 overflow-hidden rounded-2xl border border-border bg-mint">
+    <div className="group relative h-20 w-20 overflow-hidden rounded-2xl border border-border bg-mint transition-transform duration-300 hover:scale-[1.03]">
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src={member.image || '/placeholder.svg'}
         alt={`${member.name}, ${member.role}`}
         loading="lazy"
         onLoad={() => setLoaded(true)}
-        className={`h-full w-full object-cover transition-opacity duration-500 ${
+        className={`h-full w-full object-cover transition-all duration-500 group-hover:scale-110 ${
           loaded ? 'opacity-100' : 'opacity-0'
         }`}
       />
@@ -48,7 +48,7 @@ export function TeamSection() {
           <Reveal
             key={member.name}
             delay={i * 90}
-            className="flex flex-col gap-5 rounded-2xl border border-border bg-card p-6 shadow-sm"
+            className="hover-lift flex flex-col gap-5 rounded-2xl border border-border bg-card p-6 shadow-sm"
           >
             <TeamAvatar member={member} />
             <div>

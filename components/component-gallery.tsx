@@ -17,7 +17,8 @@ export function ComponentGallery() {
             <Reveal
               key={component.id}
               delay={(i % 3) * 80}
-              className="flex flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
+              variant="scale"
+              className="hover-lift flex flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-sm"
             >
               <MediaSlot
                 src={component.image}

@@ -36,9 +36,9 @@ export function ProblemSection() {
           <Reveal
             key={point.title}
             delay={i * 90}
-            className="flex flex-col gap-4 rounded-2xl border border-border bg-card p-6 shadow-sm"
+            className="hover-lift group flex flex-col gap-4 rounded-2xl border border-border bg-card p-6 shadow-sm"
           >
-            <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-mint text-primary">
+            <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-mint text-primary transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6">
               <point.icon className="h-5 w-5" aria-hidden="true" />
             </span>
             <h3 className="font-display text-lg font-semibold text-foreground">{point.title}</h3>

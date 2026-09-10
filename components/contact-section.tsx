@@ -29,18 +29,18 @@ export function ContactSection() {
           </div>
           <a
             href={`mailto:${CONTACT.email}`}
-            className="mt-auto inline-flex items-center justify-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition hover:bg-forest focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+            className="group/btn mt-auto inline-flex items-center justify-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-all duration-300 hover:-translate-y-0.5 hover:bg-forest hover:shadow-md hover:shadow-primary/20 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
           >
             Email EcoOil
-            <Mail className="h-4 w-4" aria-hidden="true" />
+            <Mail className="h-4 w-4 transition-transform duration-300 group-hover/btn:scale-110" aria-hidden="true" />
           </a>
         </Reveal>
 
         <Reveal
           delay={90}
-          className="flex flex-col gap-4 rounded-2xl border border-border bg-card p-7 shadow-sm"
+          className="hover-lift group flex flex-col gap-4 rounded-2xl border border-border bg-card p-7 shadow-sm"
         >
-          <span className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-mint text-primary">
+          <span className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-mint text-primary transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6">
             <Link2 className="h-6 w-6" aria-hidden="true" />
           </span>
           <div>
@@ -55,10 +55,10 @@ export function ContactSection() {
             href={CONTACT.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-auto inline-flex items-center justify-center gap-2 rounded-full border border-border bg-card px-5 py-2.5 text-sm font-semibold text-foreground transition hover:border-primary/30 hover:bg-mint/50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+            className="group/btn mt-auto inline-flex items-center justify-center gap-2 rounded-full border border-border bg-card px-5 py-2.5 text-sm font-semibold text-foreground transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/30 hover:bg-mint/50 hover:shadow-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
           >
             Visit LinkedIn
-            <ArrowUpRight className="h-4 w-4 text-primary" aria-hidden="true" />
+            <ArrowUpRight className="h-4 w-4 text-primary transition-transform duration-300 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" aria-hidden="true" />
           </a>
         </Reveal>
       </div>

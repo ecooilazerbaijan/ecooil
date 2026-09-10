@@ -19,7 +19,7 @@ export function AchievementsSection() {
             <Reveal
               key={achievement.id}
               delay={index * 60}
-              className="grid grid-cols-1 gap-8 rounded-3xl border border-border bg-card p-6 shadow-sm sm:p-8 lg:grid-cols-[0.9fr_1.1fr]"
+              className="hover-lift grid grid-cols-1 gap-8 rounded-3xl border border-border bg-card p-6 shadow-sm sm:p-8 lg:grid-cols-[0.9fr_1.1fr]"
             >
               <div className="flex flex-col gap-4">
                 {achievement.placement && (

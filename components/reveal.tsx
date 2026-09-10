@@ -2,14 +2,25 @@
 
 import { useEffect, useRef, useState, type ElementType, type ReactNode } from 'react'
 
+type RevealVariant = 'up' | 'scale' | 'left' | 'right' | 'fade'
+
 type RevealProps = {
   children: ReactNode
   as?: ElementType
   className?: string
   delay?: number
+  variant?: RevealVariant
 }
 
-export function Reveal({ children, as, className = '', delay = 0 }: RevealProps) {
+const variantClass: Record<RevealVariant, string> = {
+  up: 'reveal',
+  scale: 'reveal-scale',
+  left: 'reveal-left',
+  right: 'reveal-right',
+  fade: 'reveal-fade',
+}
+
+export function Reveal({ children, as, className = '', delay = 0, variant = 'up' }: RevealProps) {
   const Tag = (as ?? 'div') as ElementType
   const ref = useRef<HTMLElement>(null)
   const [visible, setVisible] = useState(false)
@@ -35,7 +46,7 @@ export function Reveal({ children, as, className = '', delay = 0 }: RevealProps)
   return (
     <Tag
       ref={ref}
-      className={`reveal ${visible ? 'is-visible' : ''} ${className}`}
+      className={`${variantClass[variant]} ${visible ? 'is-visible' : ''} ${className}`}
       style={{ transitionDelay: `${delay}ms` }}
     >
       {children}

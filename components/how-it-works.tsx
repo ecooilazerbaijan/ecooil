@@ -16,9 +16,9 @@ export function HowItWorks() {
             <Reveal
               key={step.number}
               delay={i * 80}
-              className="flex flex-col gap-3 rounded-2xl border border-border bg-card p-6 shadow-sm"
+              className="hover-lift group flex flex-col gap-3 rounded-2xl border border-border bg-card p-6 shadow-sm"
             >
-              <span className="font-display text-3xl font-semibold text-primary/30">
+              <span className="font-display text-3xl font-semibold text-primary/30 transition-all duration-300 group-hover:text-primary/60">
                 {step.number}
               </span>
               <h3 className="font-display text-lg font-semibold text-foreground">{step.title}</h3>

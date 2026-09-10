@@ -34,15 +34,15 @@ export function TechnologySection() {
               as="li"
               key={stage.label}
               delay={i * 70}
-              className={`relative flex items-center gap-4 sm:w-1/2 ${
+              className={`group relative flex items-center gap-4 sm:w-1/2 ${
                 i % 2 === 1 ? 'sm:ml-auto sm:flex-row' : 'sm:mr-auto sm:flex-row-reverse sm:text-right'
               }`}
             >
-              <span className="relative z-10 inline-flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl border border-primary/20 bg-card text-primary shadow-sm">
+              <span className="relative z-10 inline-flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl border border-primary/20 bg-card text-primary shadow-sm transition-all duration-300 group-hover:scale-110 group-hover:border-primary/40 group-hover:shadow-md group-hover:shadow-primary/20">
                 <stage.icon className="h-6 w-6" aria-hidden="true" />
               </span>
               <div
-                className={`flex-1 rounded-xl border border-border bg-card px-4 py-3 shadow-sm ${
+                className={`flex-1 rounded-xl border border-border bg-card px-4 py-3 shadow-sm transition-all duration-300 group-hover:border-primary/25 group-hover:shadow-md ${
                   i % 2 === 1 ? '' : 'sm:text-right'
                 }`}
               >

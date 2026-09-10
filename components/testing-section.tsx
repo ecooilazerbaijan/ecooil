@@ -1,15 +1,19 @@
+'use client'
+
 import { LineChart, Sunrise, Sun, Sunset } from 'lucide-react'
 import { SectionHeading } from '@/components/section-heading'
 import { Reveal } from '@/components/reveal'
 import { testingAreas } from '@/lib/site-data'
+import { useInView } from '@/lib/use-in-view'
 
 function TemperatureChart() {
+  const { ref, inView } = useInView<HTMLDivElement>()
   // Scale: 0-100°C
   const scale = 100
   const uncooled = { from: 69, to: 84 }
   const cooled = { from: 47, to: 55 }
   return (
-    <div className="mt-auto flex flex-col gap-3 rounded-xl border border-border bg-mint/20 p-4">
+    <div ref={ref} className="mt-auto flex flex-col gap-3 rounded-xl border border-border bg-mint/20 p-4">
       <div className="flex flex-col gap-1.5">
         <div className="flex items-center justify-between text-[11px] font-medium text-muted-foreground">
           <span>Without cooling</span>
@@ -17,10 +21,10 @@ function TemperatureChart() {
         </div>
         <div className="relative h-3 w-full overflow-hidden rounded-full bg-secondary">
           <div
-            className="absolute inset-y-0 rounded-full bg-orange-400"
+            className="absolute inset-y-0 rounded-full bg-orange-400 transition-[left,width] duration-[1100ms] ease-out"
             style={{
               left: `${(uncooled.from / scale) * 100}%`,
-              width: `${((uncooled.to - uncooled.from) / scale) * 100}%`,
+              width: inView ? `${((uncooled.to - uncooled.from) / scale) * 100}%` : '0%',
             }}
           />
         </div>
@@ -32,10 +36,10 @@ function TemperatureChart() {
         </div>
         <div className="relative h-3 w-full overflow-hidden rounded-full bg-secondary">
           <div
-            className="absolute inset-y-0 rounded-full bg-primary"
+            className="absolute inset-y-0 rounded-full bg-primary transition-[left,width] delay-200 duration-[1100ms] ease-out"
             style={{
               left: `${(cooled.from / scale) * 100}%`,
-              width: `${((cooled.to - cooled.from) / scale) * 100}%`,
+              width: inView ? `${((cooled.to - cooled.from) / scale) * 100}%` : '0%',
             }}
           />
         </div>
@@ -50,14 +54,15 @@ function TemperatureChart() {
 }
 
 function PerformanceChart() {
+  const { ref, inView } = useInView<HTMLDivElement>()
   const from = 30
   const to = 97
   return (
-    <div className="mt-auto flex flex-col gap-3 rounded-xl border border-border bg-mint/20 p-4">
+    <div ref={ref} className="mt-auto flex flex-col gap-3 rounded-xl border border-border bg-mint/20 p-4">
       <div className="relative h-3 w-full overflow-hidden rounded-full bg-secondary">
         <div
-          className="absolute inset-y-0 rounded-full bg-gradient-to-r from-orange-400 via-mint-foreground to-primary"
-          style={{ left: `${from}%`, width: `${to - from}%` }}
+          className="absolute inset-y-0 rounded-full bg-gradient-to-r from-orange-400 via-mint-foreground to-primary transition-[width] duration-[1200ms] ease-out"
+          style={{ left: `${from}%`, width: inView ? `${to - from}%` : '0%' }}
         />
       </div>
       <div className="flex justify-between text-[11px] font-medium text-muted-foreground">
@@ -85,8 +90,8 @@ function OperatingConditionsPanel() {
     <div className="mt-auto flex flex-col gap-3 rounded-xl border border-border bg-mint/20 p-4">
       <div className="flex items-center justify-between">
         {points.map(({ icon: Icon, label }) => (
-          <div key={label} className="flex flex-col items-center gap-1.5">
-            <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-mint text-primary">
+          <div key={label} className="group flex flex-col items-center gap-1.5">
+            <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-mint text-primary transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6">
               <Icon className="h-4 w-4" aria-hidden="true" />
             </span>
             <span className="text-[10px] font-medium text-muted-foreground">{label}</span>
@@ -114,7 +119,7 @@ export function TestingSection() {
             <Reveal
               key={area.title}
               delay={i * 90}
-              className="flex flex-col gap-4 rounded-2xl border border-border bg-card p-6 shadow-sm"
+              className="hover-lift flex flex-col gap-4 rounded-2xl border border-border bg-card p-6 shadow-sm"
             >
               <div className="flex items-center gap-3">
                 <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-mint text-primary">

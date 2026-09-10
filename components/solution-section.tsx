@@ -55,9 +55,9 @@ export function SolutionSection() {
             <Reveal
               key={stage.tag}
               delay={i * 90}
-              className="flex flex-col gap-4 rounded-2xl border border-white/12 bg-white/[0.06] p-6 backdrop-blur-sm"
+              className="group flex flex-col gap-4 rounded-2xl border border-white/12 bg-white/[0.06] p-6 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-mint/30 hover:bg-white/[0.09]"
             >
-              <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-mint text-forest">
+              <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-mint text-forest transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6">
                 <stage.icon className="h-5 w-5" aria-hidden="true" />
               </span>
               <h3 className="font-display text-lg font-semibold">{stage.tag}</h3>

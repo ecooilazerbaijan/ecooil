@@ -63,7 +63,7 @@ export function LightboxProvider({ children }: { children: ReactNode }) {
           role="dialog"
           aria-modal="true"
           aria-label={`${image.alt} — enlarged view`}
-          className="fixed inset-0 z-[100] flex flex-col bg-forest/92 backdrop-blur-sm"
+          className="fixed inset-0 z-[100] flex flex-col bg-forest/92 backdrop-blur-sm animate-overlay-in"
           onClick={close}
         >
           <div className="flex items-center justify-end gap-2 p-4">
@@ -73,7 +73,7 @@ export function LightboxProvider({ children }: { children: ReactNode }) {
                 e.stopPropagation()
                 setZoomed((z) => !z)
               }}
-              className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-white/20 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+              className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-white transition-all duration-300 hover:scale-110 hover:bg-white/20 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
               aria-label={zoomed ? 'Zoom out' : 'Zoom in'}
             >
               {zoomed ? <ZoomOut className="h-5 w-5" /> : <ZoomIn className="h-5 w-5" />}
@@ -85,7 +85,7 @@ export function LightboxProvider({ children }: { children: ReactNode }) {
                 e.stopPropagation()
                 close()
               }}
-              className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-white/20 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+              className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-white transition-all duration-300 hover:scale-110 hover:bg-white/20 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
               aria-label="Close enlarged view"
             >
               <X className="h-5 w-5" />
@@ -100,7 +100,7 @@ export function LightboxProvider({ children }: { children: ReactNode }) {
                 e.stopPropagation()
                 setZoomed((z) => !z)
               }}
-              className={`rounded-lg shadow-2xl transition-transform duration-300 ${
+              className={`animate-modal-scale-in rounded-lg shadow-2xl transition-transform duration-300 ${
                 zoomed
                   ? 'max-w-none scale-100 cursor-zoom-out sm:w-auto'
                   : 'max-h-full max-w-full cursor-zoom-in object-contain'

@@ -30,7 +30,7 @@ export function MediaSlot({
 
   return (
     <div
-      className={`group relative overflow-hidden rounded-xl border border-border bg-secondary ${className}`}
+      className={`group relative overflow-hidden rounded-xl border border-border bg-secondary transition-shadow duration-300 hover:shadow-lg hover:shadow-primary/10 ${className}`}
     >
       {/* The real image. When the file is added at its path it loads automatically. */}
       {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -41,8 +41,8 @@ export function MediaSlot({
         decoding="async"
         onLoad={() => setStatus('loaded')}
         onError={() => setStatus('error')}
-        className={`h-full w-full transition duration-500 ${imageClassName} ${
-          status === 'loaded' ? 'opacity-100 group-hover:scale-[1.03]' : 'opacity-0'
+        className={`h-full w-full transition-all duration-700 ease-out ${imageClassName} ${
+          status === 'loaded' ? 'opacity-100 group-hover:scale-[1.05]' : 'opacity-0'
         }`}
       />
 
