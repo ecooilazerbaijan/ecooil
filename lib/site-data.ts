@@ -133,15 +133,18 @@ export const specifications = [
 export const testingAreas = [
   {
     title: 'Temperature',
-    description: 'Thermal readings recorded across the prototype during operation.',
+    description:
+      'Active cooling brought peak panel temperature down from 69–84°C (uncooled) to 47–55°C.',
   },
   {
     title: 'Performance',
-    description: 'Observations on how the system behaves under solar concentration.',
+    description:
+      'Efficiency ranges from 30% to 97%, depending on the Fresnel lens, panel condition and weather.',
   },
   {
     title: 'Operating Conditions',
-    description: 'Environmental and operational context for each test session.',
+    description:
+      'Tests were run during periods of strong summer sunlight, across the full course of the day.',
   },
 ]
 
