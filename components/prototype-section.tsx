@@ -12,7 +12,7 @@ export function PrototypeSection() {
       />
       <Reveal className="mt-10">
         <MediaSlot
-          src="/images/prototype/ecooil-prototype.jpg"
+          src="/images/prototype/ecooil-prototype-full.jpg"
           alt="Complete EcoOil prototype"
           label="Complete EcoOil Prototype"
           className="aspect-[16/9] shadow-xl shadow-primary/5"

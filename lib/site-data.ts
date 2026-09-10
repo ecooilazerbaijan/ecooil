@@ -147,20 +147,20 @@ export const testingAreas = [
 
 export const timeline = [
   {
-    year: '2025',
-    title: 'CESECO — Clean Energy Program',
-    description: 'Participation in the CESECO clean-energy program.',
-  },
-  {
-    year: '2025',
+    year: '2024',
     title: 'GREENSTEAM SAF Festival',
-    description: '2nd Place at the GREENSTEAM SAF 2025 Azerbaijan Festival.',
+    description: '2nd Place at the GREENSTEAM SAF Azerbaijan Green Festival.',
   },
   {
     year: '2025',
     title: 'Sabahın alimləri',
     description:
       '2nd Place at the XIV Republican Project Competition in Ecology & Environmental Management.',
+  },
+  {
+    year: '2026',
+    title: 'CESECO — Clean Energy Program',
+    description: 'Participation in the CESECO clean-energy program.',
   },
 ]
 

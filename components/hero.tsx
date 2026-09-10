@@ -53,7 +53,7 @@ export function Hero() {
             className="absolute -inset-3 -z-10 rounded-3xl bg-mint/50 blur-xl"
           />
           <MediaSlot
-            src="/images/prototype/ecooil-prototype.jpg"
+            src="/images/prototype/ecooil-prototype-hero.jpg"
             alt="The complete EcoOil prototype"
             label="EcoOil Prototype"
             eager

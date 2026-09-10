@@ -6,11 +6,7 @@ export type Achievement = {
   placement?: string
   category?: string
   description: string
-  certificateImage?: string
-  certificateLabel?: string
-  diplomaImage?: string
-  diplomaLabel?: string
-  additionalImages?: { src: string; label: string }[]
+  coverImage: string
 }
 
 export const achievements: Achievement[] = [
@@ -23,29 +19,23 @@ export const achievements: Achievement[] = [
     category: 'Ecology & Environmental Management',
     description:
       'EcoOil was recognized at the XIV Republican Project Competition in the Ecology & Environmental Management category.',
-    certificateImage: '/images/achievements/sabah-alimleri/certificate.jpg',
-    certificateLabel: 'Certificate',
-    diplomaImage: '/images/achievements/sabah-alimleri/diploma.jpg',
-    diplomaLabel: 'Diploma',
+    coverImage: '/images/achievements-cover/sabah-alimleri.svg',
   },
   {
     id: 'saf',
-    title: 'GREENSTEAM SAF 2025 Azerbaijan Festival',
-    year: '2025',
+    title: 'GREENSTEAM SAF Azerbaijan Green Festival',
+    year: '2024',
     placement: '2nd Place',
     description:
-      'EcoOil took part in the GREENSTEAM SAF 2025 Azerbaijan Festival, a clean-energy and STEAM-focused event.',
-    certificateImage: '/images/achievements/saf/certificate.jpg',
-    certificateLabel: 'Certificate',
-    additionalImages: [],
+      'EcoOil took part in the GREENSTEAM SAF Azerbaijan Green Festival, a clean-energy and STEAM-focused event.',
+    coverImage: '/images/achievements-cover/saf.svg',
   },
   {
     id: 'cececo',
     title: 'CESECO — Clean Energy Program',
-    year: '2025',
+    year: '2026',
     description:
       'EcoOil participated in the CESECO clean-energy program, exploring practical approaches to solar energy protection and thermal management.',
-    certificateImage: '/images/achievements/cececo/certificate.jpg',
-    certificateLabel: 'Certificate',
+    coverImage: '/images/achievements-cover/cececo.svg',
   },
 ]

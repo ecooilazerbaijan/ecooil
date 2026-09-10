@@ -21,12 +21,12 @@ export function SiteHeader() {
         scrolled ? 'border-b border-border bg-background/85 backdrop-blur-md' : 'bg-transparent'
       }`}
     >
-      <nav className="mx-auto flex h-20 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
+      <nav className="mx-auto flex h-24 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
         <a href="#top" className="flex items-center gap-2.5" aria-label="EcoOil home">
           <img
             src="/ecooil-logo.png"
             alt="EcoOil logo"
-            className="h-14 w-14 rounded-lg object-contain"
+            className="h-16 w-16 rounded-lg object-contain sm:h-20 sm:w-20"
           />
           <span className="font-display text-lg font-semibold tracking-tight text-foreground">
             EcoOil

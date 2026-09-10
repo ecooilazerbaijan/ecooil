@@ -11,7 +11,7 @@ export function SiteFooter() {
               <img
                 src="/ecooil-logo.png"
                 alt="EcoOil logo"
-                className="h-14 w-14 rounded-lg object-contain"
+                className="h-20 w-20 rounded-lg object-contain"
               />
               <span className="font-display text-lg font-semibold tracking-tight text-foreground">
                 EcoOil

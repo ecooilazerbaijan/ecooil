@@ -9,27 +9,12 @@ export function AchievementsSection() {
     <section id="achievements" className="mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-24">
       <SectionHeading
         eyebrow="Achievements"
-        title="Recognition, certificates and diploma"
-        description="EcoOil has taken part in competitions and clean-energy programs. Real certificates and the diploma can be added to the slots below."
+        title="Recognition and milestones"
+        description="EcoOil has taken part in competitions and clean-energy programs, earning recognition along the way."
       />
 
       <div className="mt-12 flex flex-col gap-8">
         {achievements.map((achievement, index) => {
-          const slots = [
-            achievement.certificateImage && {
-              src: achievement.certificateImage,
-              label: achievement.certificateLabel ?? 'Certificate',
-            },
-            achievement.diplomaImage && {
-              src: achievement.diplomaImage,
-              label: achievement.diplomaLabel ?? 'Diploma',
-            },
-            ...(achievement.additionalImages ?? []).map((img) => ({
-              src: img.src,
-              label: img.label,
-            })),
-          ].filter(Boolean) as { src: string; label: string }[]
-
           return (
             <Reveal
               key={achievement.id}
@@ -68,24 +53,13 @@ export function AchievementsSection() {
                 </div>
               </div>
 
-              <div
-                className={`grid gap-4 ${slots.length > 1 ? 'sm:grid-cols-2' : 'sm:grid-cols-1'}`}
-              >
-                {slots.map((slot) => (
-                  <div key={slot.src} className="flex flex-col gap-2">
-                    <MediaSlot
-                      src={slot.src}
-                      alt={`${achievement.title} — ${slot.label}`}
-                      label={slot.label}
-                      imageClassName="object-contain"
-                      className="aspect-[3/4] bg-secondary"
-                    />
-                    <span className="text-center text-xs font-medium uppercase tracking-[0.12em] text-muted-foreground">
-                      {slot.label}
-                    </span>
-                  </div>
-                ))}
-              </div>
+              <MediaSlot
+                src={achievement.coverImage}
+                alt={achievement.title}
+                openable={false}
+                imageClassName="object-cover"
+                className="aspect-[4/3] bg-secondary sm:aspect-auto sm:h-full"
+              />
             </Reveal>
           )
         })}

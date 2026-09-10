@@ -1,0 +1,51 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#d9f0e3"/>
+      <stop offset="100%" stop-color="#9ed9b6"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg2)"/>
+  <circle cx="700" cy="480" r="160" fill="#24402f" opacity="0.08"/>
+  <circle cx="60" cy="60" r="110" fill="#ffffff" opacity="0.3"/>
+
+  <!-- sun -->
+  <circle cx="640" cy="130" r="46" fill="#f4c94e"/>
+  <g stroke="#f4c94e" stroke-width="6" stroke-linecap="round">
+    <line x1="640" y1="50" x2="640" y2="30"/>
+    <line x1="640" y1="210" x2="640" y2="230"/>
+    <line x1="560" y1="130" x2="540" y2="130"/>
+    <line x1="720" y1="130" x2="740" y2="130"/>
+    <line x1="583" y1="73" x2="569" y2="59"/>
+    <line x1="697" y1="187" x2="711" y2="201"/>
+    <line x1="697" y1="73" x2="711" y2="59"/>
+    <line x1="583" y1="187" x2="569" y2="201"/>
+  </g>
+
+  <!-- wind turbine -->
+  <g transform="translate(150,380)">
+    <rect x="-6" y="0" width="12" height="180" fill="#ffffff"/>
+    <circle cx="0" cy="0" r="10" fill="#24402f"/>
+    <g stroke="#ffffff" stroke-width="10" stroke-linecap="round">
+      <line x1="0" y1="0" x2="8" y2="-90" transform="rotate(20)"/>
+      <line x1="0" y1="0" x2="8" y2="-90" transform="rotate(140)"/>
+      <line x1="0" y1="0" x2="8" y2="-90" transform="rotate(260)"/>
+    </g>
+  </g>
+
+  <!-- bunting flags -->
+  <g stroke="#24402f" stroke-width="3" fill="none">
+    <path d="M60 260 Q 400 200 720 260"/>
+  </g>
+  <g>
+    <polygon points="140,258 165,258 152,300" fill="#3f8f61"/>
+    <polygon points="260,240 285,240 272,282" fill="#f4c94e"/>
+    <polygon points="400,232 425,232 412,274" fill="#3f8f61"/>
+    <polygon points="540,240 565,240 552,282" fill="#f4c94e"/>
+    <polygon points="640,255 665,255 652,297" fill="#3f8f61"/>
+  </g>
+
+  <text x="60" y="480" font-family="Georgia, serif" font-size="30" font-weight="600" fill="#1f3a2b">GREENSTEAM SAF</text>
+  <text x="60" y="512" font-family="Georgia, serif" font-size="24" font-weight="600" fill="#1f3a2b">Azerbaijan Green Festival</text>
+  <text x="60" y="542" font-family="Arial, sans-serif" font-size="18" fill="#2d5a41">2nd Place · 2024</text>
+</svg>
