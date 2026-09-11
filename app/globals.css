@@ -191,6 +191,24 @@
     animation: float-slow-reverse 8s ease-in-out infinite;
   }
 
+  @keyframes spin-slow {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  .animate-spin-slow {
+    animation: spin-slow 3s linear infinite;
+  }
+
+  @keyframes beam-flow {
+    to {
+      stroke-dashoffset: -24;
+    }
+  }
+  .animate-beam-flow {
+    animation: beam-flow 1.2s linear infinite;
+  }
+
   /* Modal entrance */
   @keyframes overlay-in {
     from {

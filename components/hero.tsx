@@ -1,5 +1,5 @@
 import { ArrowRight, Award } from 'lucide-react'
-import { MediaSlot } from '@/components/media-slot'
+import { PrototypeVisual } from '@/components/prototype-visual'
 import { Reveal } from '@/components/reveal'
 
 export function Hero() {
@@ -77,16 +77,7 @@ export function Hero() {
             aria-hidden="true"
             className="absolute -inset-3 -z-10 rounded-3xl bg-mint/50 blur-xl"
           />
-          <MediaSlot
-            src="/images/prototype/ecooil-prototype-hero.jpg"
-            alt="The complete EcoOil prototype"
-            label="EcoOil Prototype"
-            eager
-            className="aspect-[4/3] shadow-xl shadow-primary/5"
-          />
-          <span className="absolute bottom-3 left-3 rounded-full bg-card/90 px-3 py-1 text-xs font-medium text-mint-foreground shadow-sm backdrop-blur">
-            Physical engineering prototype
-          </span>
+          <PrototypeVisual />
         </Reveal>
       </div>
     </section>
